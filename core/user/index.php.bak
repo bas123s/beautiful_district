@@ -1,0 +1,266 @@
+
+<style>
+.style53 {
+background-image:linear-gradient(rgb(0,0,255), rgb(255,255,255));
+background-size: 100% 100%;	
+};
+</style>
+</head>
+<table width="100%" height="425" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td class ="style53"> 			
+				<tr>
+    <th   class ="style53" height ='100'> 
+
+
+
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+        <meta name="description"
+              content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+        <meta name="keywords"
+              content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="PIXINVENT">
+        <title>Login Page - Vuexy - Bootstrap HTML admin template</title>
+        <link rel="apple-touch-icon" href="../../template/app-assets/images/ico/apple-icon-120.png">
+        <link rel="shortcut icon" type="image/x-icon" href="../../template/app-assets/images/ico/favicon.ico">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">-->
+        <link href="../../require/google_font.css" rel="stylesheet">
+
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/vendors/css/vendors.min.css">
+        <!-- END: Vendor CSS-->
+
+        <!-- BEGIN: Theme CSS-->
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/bootstrap-extended.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/colors.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/components.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/themes/dark-layout.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/themes/bordered-layout.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/themes/semi-dark-layout.css">
+
+        <!-- BEGIN: Page CSS-->
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/core/menu/menu-types/vertical-menu.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/plugins/forms/form-validation.css">
+        <link rel="stylesheet" type="text/css" href="../../template/app-assets/css/pages/authentication.css">
+        <!-- END: Page CSS-->
+
+        <!-- BEGIN: Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="../../template/assets/css/style.css">
+        <!-- END: Custom CSS-->
+
+
+        <!-- Font Awesome Solid + Brands -->
+        <link href="../../vendor/components/font-awesome/css/all.min.css" rel="stylesheet">
+        <!-- Font Awesome Solid + Brands -->
+<meta name="viewport" content="width=device-width" />
+
+
+
+
+
+
+
+    </head>
+    <!-- END: Head-->
+
+    <!-- BEGIN: Body-->
+
+    <body class="vertical-layout bg-black vertical-menu-modern blank-page navbar-floating footer-static  " data-open="click"
+          data-menu="vertical-menu-modern" data-col="blank-page">
+        <!-- BEGIN: Content-->
+        <div class="app-content content ">
+            <div class="content-overlay"></div>
+            <div class="header-navbar-shadow"></div>
+            <div class="content-wrapper">
+                <div class="content-header row">
+                </div>
+                <div class="content-body">
+                    <div class="auth-wrapper auth-basic px-2">
+                        <div class="auth-inner my-2">
+                            <!-- Login basic -->
+                            <div class="card mb-0"style="border:0px solid Tomato;">
+                                <div class="card-body">
+                                    <!-- <a href="index.html" class="brand-logo"> -->
+                                        <div align ="center"><a href ="http://164.115.41.24/0301/decoration/core/user/index.php"><img src="../../require/images/logo_500x500.png" class="mb-2" alt="Avatar"
+                                             style="width:150%; max-width:150px;"></a></div>
+
+                                    </a>
+
+                                    <h2 class="text-center fw-bolder mb-1">ระบบขอพระราชทาน <br>เครื่องราชอิสริยาภรณ์</h2>
+                                    <h3 class="text-center mb-2">
+                                       ลงชื่อเข้าใช้ระบบงาน </h3>
+<script language="JavaScript">
+function check() {
+ if(document.form1.username.value=="") {
+       alert("กรอกรหัสผู้ใช้") ;
+      document.form1.username.focus() ;
+     return false ;
+    }
+      else if(document.form1.password.value=="") {
+     alert("กรอกรหัสผ่าน") ;
+    document.form1.password.focus() ;
+    return false ;
+   }
+             else
+           return true ;
+          }
+        </script>
+                                    <!--<form class="auth-login-form mt-2" action="index.html" method="POST">-->
+                                    <form id='form1' class="auth-login-form mt-2" action="password.php" method="POST">
+                                        <div class="mb-1">
+                                            <label for="username" class="form-label fw-bolder"style ="font-size:18">รหัสผู้เข้าใช้งาน</label>
+                                            <input type="text" class="form-control"id="username" name="username"  maxlength="13"  value="" minlength="13" data-error="กรุณากรอกหมายเลขบัตรประชาชน 13 หลัก" required=""onkeyup="keyup(this,event)" onkeypress="return Numbers(event)"
+			style=""placeholder="กรอกเลขบัตรประจำตัวประชาชน 13 หลัก">
+											
+											<!--  <input type="text" class="form-control" id="username" name="username" placeholder="รหัสผู้ใช้งาน"
+                                                   aria-describedby="รหัสผู้ใช้งาน" tabindex="1" autofocus />-->
+                                        </div>
+
+                                        <div class="mb-1">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label fw-bolder" for="password" style ="font-size:18">รหัสผ่าน</label>
+                                                <!--                        <a href="auth-forgot-password-basic.html">
+                                                                            <small>ลืมรหัสผ่าน ?</small>
+                                                                          </a>-->
+                                            </div>
+                                            <div class="input-group input-group-merge form-password-toggle">
+                                                <input type="password" class="form-control form-control-merge" id="password" name="password"
+                                                       tabindex="2"
+                                                       placeholder="กรอกรหัสผ่าน:dopakey1234"
+                                                       aria-describedby="password" />
+                                                <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <button type="submit" class="btn btn-primary w-100" tabindex="4"style ="font-size:20"onclick="javascript:check();">เข้าสู่ระบบ</button>
+                                        <br>
+                                        <input type="hidden" name="x" value="L">
+                                        <input type="hidden" name="chx" value="1">
+
+
+                                    </form>
+
+                                    <div class="demo-inline-spacing flex justify-content-center">
+                                        <a class="" href="tutorial_send.pdf"><button type="button" class="btn btn-danger "
+                                                                                     tabindex="4">คู่มือผู้ขอรับพระราชทาน</button></a>
+
+                                        <a class="" href="tutorial_receive.pdf"> <button type="button" class="btn btn-warning "
+                                                                                         tabindex="4">คู่มือเจ้าหน้าที่</button></a>
+                                    </div>
+                                    <hr>
+                                    <h4 class="text-center fw-bolder mb-1">Video ขั้นตอนการใช้งาน</h4>
+                                    <div class="demo-inline-spacing flex justify-content-center">
+
+                                        <a class="" href="video1.mp4" target="_blank"> <button type="button" class="btn btn-info "
+                                                                                               tabindex="4">ผู้ขอรับพระราชทาน</button></a>
+
+                                        <a class="" href="video2.mp4" target="_blank"> <button type="button" class="btn btn-info "
+                                                                                               tabindex="4">เจ้าหน้าที่</button></a>
+
+
+
+
+                                    </div>
+
+
+                <!--                  <p class="text-center mt-2">
+                    <span>New on our platform?</span>
+                    <a href="auth-register-basic.html">
+                      <span>Create an account</span>
+                    </a>
+                  </p>-->
+                                    <br>
+                                    <footer class="blockquote-footer text-end">
+                                        <i class="fa-solid fa-copyright"></i> ศูนย์สารสนเทศเพื่อการบริหารงานปกครอง กรมการปกครอง <br>
+                                        <cite title="Source Title">ติดต่อสอบถาม  <span class="text-primary">Line ID : @thaiqm </span> </cite>
+                                    </footer>
+
+                                </div>
+
+                            </div>
+
+                            <!-- /Login basic -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END: Content-->
+        <?php if (isset($_REQUEST["a"])) { ?>
+            <!-- begin modal -->
+            <div class="modal fade" id="shareProject" tabindex="-1" aria-labelledby="shareProjectTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><i class="fa-solid fa-gear"></i> ระบบ</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                            <h4>
+                                <?= @$_REQUEST["a"] ?>
+                            </h4>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
+                                    class="fa-regular fa-circle-xmark"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / end modal -->
+        <?php } ?>
+
+
+        <!-- BEGIN: Vendor JS-->
+        <script src="../../template/app-assets/vendors/js/vendors.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+
+        <!-- BEGIN: Page Vendor JS-->
+        <script src="../../template/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+        <!-- END: Page Vendor JS-->
+
+        <!-- BEGIN: Theme JS-->
+        <script src="../../template/app-assets/js/core/app-menu.js"></script>
+        <script src="../../template/app-assets/js/core/app.js"></script>
+        <!-- END: Theme JS-->
+
+        <!-- BEGIN: Page JS-->
+        <script src="../../template/app-assets/js/scripts/pages/auth-login.js"></script>
+        <!-- END: Page JS-->
+
+        <script>
+            $(window).on('load', function () {
+                if (feather) {
+                    feather.replace({
+                        width: 14,
+                        height: 14
+                    });
+                }
+            })
+        </script>
+
+
+        <?php if (isset($_REQUEST["a"])) { ?>
+            <script type="text/javascript">
+                window.onload = () => {
+                    $('#shareProject').modal('show');
+                };
+            </script>
+        <?php } ?>
+    </body>
+</body>
+<!-- END: Body-->
+
+</html>

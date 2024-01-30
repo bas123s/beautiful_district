@@ -1,0 +1,236 @@
+<?php
+require '../../require/partials/main.php'
+?>
+
+<head>
+
+
+
+
+    <!-- Css -->
+
+
+
+    <?php
+    require '../../require/partials/head-css.php'
+    ?>
+
+    <link href="../../require/partials/assets/fonts/googlefont.css" rel="stylesheet">
+</head>
+<?php
+require '../../require/partials/body.php';
+require '../../require/partials/navbar/nav-onepage.php'
+?>
+
+<section class="relative table w-full py-36 lg:py-64 bg-[url('../../assets/images/hospital/bg.jpg')] bg-no-repeat bg-center bg-cover">
+ 
+        </section><!--end section-->
+<section id="features" class="relative  md:pb-24 pb-16 ">
+
+    <div class="container relative md:mt-24 mt-16">
+        <div class="grid grid-cols-1 pb-8 text-center">
+            <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">แดชบอร์ดข้อมูลสรุปผลเกณฑ์การประเมิน</h3>
+
+
+        </div><!--end grid-->
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause01.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_dopa.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_dopa.php" class="hover:text-indigo-600 font-semibold text-xl">แดชบอร์ดสรุปผลเกณฑ์การประเมิน หัวข้อการประเมินหลัก 1. การขับเคลื่อนภารกิจของ มท.</a>
+
+                </div>
+            </div><!--end content-->
+
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause02.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_support.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_support.php" class="hover:text-indigo-600 font-semibold text-xl">แดชบอร์ดสรุปผลเกณฑ์การประเมิน หัวข้อการประเมินหลัก 2. "การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย"</a>
+
+                </div>
+            </div><!--end content-->
+
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause03.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_5s.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_5s.php" class="hover:text-indigo-600 font-semibold text-xl">แดชบอร์ดสรุปผลเกณฑ์การประเมิน หัวข้อการประเมินหลัก 3. การจัดการความเรียบร้อยของที่ทำการปกครองอำเภอ (5 ส.)</a>
+
+
+                </div>
+            </div><!--end content-->
+
+
+
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause05.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_services.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_services.php" class="hover:text-indigo-600 font-semibold text-xl">แดชบอร์ดสรุปผลเกณฑ์การประเมิน หัวข้อการประเมินหลัก 4. การให้บริการประชาชนและเป็นที่พึ่งให้ประชาชน</a>
+
+
+
+                </div>
+            </div><!--end content-->
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause04.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_org.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_org.php" class="hover:text-indigo-600 font-semibold text-xl">แดชบอร์ดสรุปผลเกณฑ์การประเมิน หัวข้อการประเมินหลัก 5. การตรวจประเมินจากหน่วยงานภายนอก</a>
+
+
+
+                </div>
+            </div><!--end content-->
+            <div class="group relative rounded hover:-mt-1 shadow hover:shadow-md dark:shadow-gray-800 overflow-hidden transition-all duration-300">
+                <div class="relative overflow-hidden">
+                    <img src="assets/images/charity/cause06.png" alt="">
+
+                    <div class="absolute p-4 start-0 end-0 text-center bg-slate-900/80 -bottom-24 group-hover:bottom-0 transition-all duration-300">
+                        <a href="../../dashboard/rpt/rpt_all.php" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">ดูรายละเอียด</a>
+                    </div>
+                </div>
+
+                <div class="p-6">
+                    <a href="../../dashboard/rpt/rpt_all.php" class="hover:text-indigo-600 font-semibold text-xl">รวมแดชบอร์ดสรุปผลเกณฑ์การประเมิน</a>
+
+
+
+                </div>
+            </div><!--end content-->
+
+
+
+
+        </div><!--end grid-->
+    </div>
+    
+    <!--end container-->
+    <div class="container relative md:mt-24 mt-16">
+    <div class="grid md:grid-cols-2 grid-cols-1 items-center mt-10 gap-[30px]">
+      <div class="relative">
+      <a href="assets/images/saas/classic02.jpg" class="rounded-lg shadow-md dark:shadow-gray-800 lightbox transition-all duration-500 group-hover:scale-105 tobii-zoom" title="">
+                                        <img src="assets/images/saas/classic02.jpg" class="" width="900"
+          height="600">
+                                    <div class="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div></a>
+
+          
+        <div
+          class="overflow-hidden absolute lg:h-[400px] h-[320px] lg:w-[400px] w-[320px] bg-indigo-600/5 bottom-0 start-0 rotate-45 -z-1 rounded-3xl">
+        </div>
+      </div>
+
+      <div class="lg:ms-8">
+        <div class="grid grid-cols-1 gap-[30px]">
+          <a
+            href="" class="group flex items-center relative overflow-hidden p-6 rounded-md shadow dark:shadow-gray-800 bg-gray-50 dark:bg-slate-800 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-all duration-500 ease-in-out">
+            <span
+              class="text-indigo-600 group-hover:text-white text-5xl font-semibold transition-all duration-500 ease-in-out">
+              <i class="uil uil-list-ol"></i>
+            </span>
+            <div class="flex-1 ms-3">
+              <h5 class="group-hover:text-white text-xl font-semibold transition-all duration-500 ease-in-out">การจัดลำดับคะแนนรอบที่ 1</h5>
+              <p class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-2">การจัดลำดับตามเกณฑ์คะแนน จำนวน 100 อำเภอ</p>
+            </div>
+            <div
+              class="absolute start-1 top-5 text-dark/[0.03] dark:text-white/[0.03] text-8xl group-hover:text-white/[0.04] transition-all duration-500 ease-in-out">
+              <i class="uil uil-list-ol"></i>
+            </div>
+          </a>
+
+          <a href="" 
+            class="group flex items-center relative overflow-hidden p-6 rounded-md shadow dark:shadow-gray-800 bg-gray-50 dark:bg-slate-800 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-all duration-500 ease-in-out">
+            <span
+              class="text-indigo-600 group-hover:text-white text-5xl font-semibold transition-all duration-500 ease-in-out">
+              <i class="uil uil-list-ol-alt"></i>
+            </span>
+            <div class="flex-1 ms-3">
+              <h5 class="group-hover:text-white text-xl font-semibold transition-all duration-500 ease-in-out">การจัดลำดับคะแนนรอบที่ 2</h5>
+              <p class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-2">การจัดลำดับตามเกณฑ์คะแนน จำนวน 50 อำเภอ</p>
+            </div>
+            <div
+              class="absolute start-1 top-5 text-dark/[0.03] dark:text-white/[0.03] text-8xl group-hover:text-white/[0.04] transition-all duration-500 ease-in-out">
+              <i class="uil uil-list-ol-alt"></i>
+            </div>
+          </a>
+
+          <a href="../../dashboard/rpt/ranking.php"
+            class="group flex items-center relative overflow-hidden p-6 rounded-md shadow dark:shadow-gray-800 bg-gray-50 dark:bg-slate-800 hover:bg-indigo-600 dark:hover:bg-indigo-600 transition-all duration-500 ease-in-out">
+            <span
+              class="text-indigo-600 group-hover:text-white text-5xl font-semibold transition-all duration-500 ease-in-out">
+              <i class="uil uil-award"></i>
+            </span>
+            <div class="flex-1 ms-3">
+              <h5 class="group-hover:text-white text-xl font-semibold transition-all duration-500 ease-in-out">
+              การจัดลำดับคะแนนรอบสุดท้าย</h5>
+              <p class="text-slate-400 group-hover:text-white/50 transition-all duration-500 ease-in-out mt-2">การจัดลำดับตามเกณฑ์คะแนน จำนวน 17 อำเภอ</p>
+            </div>
+            <div
+              class="absolute start-1 top-5 text-dark/[0.03] dark:text-white/[0.03] text-8xl group-hover:text-white/[0.04] transition-all duration-500 ease-in-out">
+              <i class="uil uil-award"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div><!--end grid-->
+  </div><!--end container-->
+
+</section><!--end section-->
+
+<?php
+require '../../require/partials/footer/footer.php';
+require '../../require/partials/cookies.php';
+require '../../require/partials/switcher.php';
+?>
+
+
+<!-- Back to top -->
+<a href="#" onclick="topFunction()" id="back-to-top"
+   class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-indigo-600 text-white leading-9"><i
+        class="uil uil-arrow-up"></i></a>
+<!-- Back to top -->
+
+
+
+<!-- JAVASCRIPTS -->
+
+<?php
+require '../../require/partials/script-file.php';
+?>
+<!-- JAVASCRIPTS -->
+</body>
+
+</html>
