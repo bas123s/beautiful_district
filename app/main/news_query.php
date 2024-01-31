@@ -8,12 +8,16 @@ ini_set('log_errors', 1);
 require("../../php_class/main_class.php"); //เรียกใช้ไฟล์คลาส
 require '../../require/image_function.php';
 $mc = new main_class("conn_main_class"); // สร้าง connection ใหม่
-$mc->table_name = "pro_uploads"; //กำหนดชื่อตารางที่จะบันทึกข้อมูล
+$mc->table_name = "news"; //กำหนดชื่อตารางที่จะบันทึกข้อมูล
 $debug = 0; // 1=เปิด debug , 0 ปิด debug
+$currentDateTime = date('Ymd_His');
 
-$_POST['created_date'] = date('Y-m-d');
-$_POST['status'] = "2";
 
+$_POST['created_date'] = date('Y-m-d H:i:s', strtotime($_POST['created_date'] . ' ' . date('H:i:s')));
+
+$_POST['status'] = "1";
+// print_r($_FILES);
+// exit();
 
 function store_uploaded_image($html_element_name,$fileNameNew,$key_data, $data_attrib, $fileDestination, $new_img_width, $new_img_height) {
 	//install php gd 
@@ -38,36 +42,37 @@ foreach ($_FILES as $key => $value) {
 	    $fileExt = explode('.', $fileName);
 	    $fileActualExt = strtolower(end($fileExt));
 
-	    $fileNameNew = "GEN_".$key.$_POST['acode'].".".$fileActualExt;
-	    $fileDestination = "../../uploads/upload_file/".$fileNameNew;
+		$fileNameNew = "GEN_" . $key . $currentDateTime . "." . $fileActualExt;
+	    $fileDestination = "../../uploads/upload_news/".$fileNameNew;
 
 	    /*move_uploaded_file($fileTmpName, $fileDestination);
 	    $message = "File upload successful";
 	    echo $key;*/
 	    if($fileActualExt=="jpg"||$fileActualExt=="png"||$fileActualExt=="gif"||$fileActualExt=="jpeg"){
 	        $file_save = store_uploaded_image($fileName,$fileNameNew,$key,$value, $fileDestination, 800, 600);
-	        // echo $file_save;
+	        echo $file_save; 
+   
 	    }
 	    else{
-	    	move_uploaded_file($value['tmp_name'], $fileDestination);
-         
+	    	// move_uploaded_file($value['tmp_name'], $fileDestination);
+
+
 	    }
 	    $_POST[$key]=$fileNameNew;
+
+     
 	}
 }
 
+$action = $_REQUEST["action"];
+if ($mc->basic_query($debug, $action)) {
+  $link = "บันทึกข้อมูลเรียบร้อยแล้ว";
+  unset($_POST);
+} else {
+  $link = "ไม่สามารถบันทึกข้อมูลได้";
+}
 
-
-$action = "UPDATE";
-$temp;
-
-  $temp = $mc->basic_query("0", "UPDATE");
-
-$link = "pro_uploads.php?a=บันทึกสำเร็จ&pcode=" . $_POST['pcode'] . "&aname=" . $_POST['aname'] . "";
+$link = "news_detail.php?a=" . $link . "&action=" . $action;
+//echo "<hr>" . $link;
 header("Location: " . $link);
 
-
-
-
-
-?>

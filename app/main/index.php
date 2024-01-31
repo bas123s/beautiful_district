@@ -374,6 +374,28 @@ require '../../require/head2.php';
         </div>
         <?php
     }
+    if (@$user['pid'] == '030001') { ?>
+
+<div
+            class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
+            <div
+                class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                <a href="../main/news_detail.php"> <img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+                        src="logo_500x500.png" alt="" width="384" height="512"> </a>
+            </div>
+            <div class="content mt-7">
+                <a href="../main/news_detail.php" class="title h5 text-lg font-medium hover:text-indigo-600">
+                อัพโหลด ข่าวสารและประชาสัมพันธ์</a>
+                <p class="text-slate-400 mt-3">" ข่าวสาร ประชาสัมพันธ์"</p>
+                <div class="mt-5">
+                    <a href="../main/news_detail.php"
+                        class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">จัดการข่าว
+                        <i class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <?php   
+    }
 }
 ?>
 

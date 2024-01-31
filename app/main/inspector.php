@@ -150,7 +150,7 @@ $data = $mc->select_all($sql);
                 <div class="card-body md:text-xl text-xl font-medium text-center">
  
 
-                        <table id="example" class="table-bordered table-responsive" style="width : 100%;">
+                        <table id="example" class="table table-striped table-responsive" style="width : 100%;">
                             <h3 class="text-center text-3xl font-bold"> แบบบันทึกข้อมูล อัปโหลดรูปภาพ</h3>
                             <thead>
                                 <tr class="text-center">

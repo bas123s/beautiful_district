@@ -1,5 +1,11 @@
 <?php
-require '../../require/partials/main.php'
+require '../../require/partials/main.php';
+
+
+require '../../require/head_php3.php';
+
+$sql = "SELECT * FROM `beautiful_district`.`news` ORDER BY id DESC ;";
+$data = $mc->select_all($sql);
 ?>
 
 <head>
@@ -25,6 +31,53 @@ require '../../require/partials/navbar/nav-onepage.php'
 <section class="relative table w-full py-36 lg:py-64 bg-[url('../../assets/images/hospital/bg.jpg')] bg-no-repeat bg-center bg-cover">
  
         </section><!--end section-->
+              <!-- Start -->
+              <section class="relative md:py-16 py-16">
+       
+            <div class="container mx-auto px-4 relative md:mt-24 mt-16">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">ข่าวสาร ประชาสัมพันธ์</h3>
+                    <div class="lg:col-span-4 md:col-span-6 md:text-end hidden md:block">
+                        <!-- <a href="news_list.php" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อ่านเพิ่มเติม<i class="uil uil-arrow-right align-middle"></i></a> -->
+                    </div>
+                    <p class="text-slate-400 max-w-xl mx-auto"></p>
+                </div><!--end grid-->
+     
+                <div class="grid grid-cols-1 mt-2 md:mt-6 relative">
+                    <div class="tiny-three-item">
+                        <!-- Slide -->
+                        <?php foreach ($data as $news) { ?>      
+                        <div class="tiny-slide">
+                        <div class="blog relative rounded-md shadow dark:shadow-gray-800 overflow-hidden">
+            <img src="../../uploads/upload_news/<?= $news['pic_1']; ?>" alt="">
+            <div class="content p-6">
+                <a href="news.php?id=<?= $news['id']; ?>" class="title h5 text-lg font-medium hover:text-indigo-600 duration-500 ease-in-out"><?= $news['title']; ?></a>
+                <p class="text-slate-400 mt-3 overflow-hidden max-h-12 leading-6"><?= $news['detail']; ?></p>
+
+
+
+                <div class="mt-4">
+                    <a href="news.php?id=<?= $news['id']; ?>" class="relative inline-block tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 font-normal hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อ่านเพิ่มเติม <i class="uil uil-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+ 
+                        </div>
+                        <?php } ?>
+                        <!-- Slide -->
+
+                      
+                    </div>
+                </div><!--end grid-->
+
+                <div class="grid md:grid-cols-12 grid-cols-1 md:hidden ">
+                    <div class="md:col-span-12 text-center">
+                        <a href="nft-creators.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">See More <i class="uil uil-arrow-right align-middle"></i></a>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
 <section id="features" class="relative  md:pb-24 pb-16 ">
 
 
