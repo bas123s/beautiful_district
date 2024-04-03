@@ -147,10 +147,7 @@ try {
                        
                         <tr>
                             <td>3 </td>
-                            <td style="text-align: left; padding-left: 10px;" >การบริหารจัดการขยะ 
-ถังขยะเปียกลดโลกร้อน 
-และธนาคารขยะ
- </td>
+                            <td style="text-align: left; padding-left: 10px;" >การให้ความช่วยเหลือผู้ยากไร้ </td>
                             <td>20</td>
                             <td class="px-4 py-2 text-right"> <?= @$data['support']; ?></td>
                         </tr><!-- comment -->

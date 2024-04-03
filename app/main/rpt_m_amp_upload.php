@@ -330,8 +330,8 @@ $data = $mc->select_1($sql);
                 <tr>
                   <td style="vertical-align: top;">2.
                     ผ้าไทยใส่ให้สนุก</td>
-                  <td>1. ผลการปฏิบัติงาน : มีการรณรงค์สวมใส่ผ้าไทย
-                    เพื่อเป็นต้นแบบ
+                  <td>1. ผลการปฏิบัติงาน : มีการรณรงค์สวมใส่ผ้าไทย 
+เพื่อเป็นต้นแบบ
 
                   </td>
                   <td>
@@ -396,11 +396,12 @@ $data = $mc->select_1($sql);
 
 
                   <td style="vertical-align: top;">3.
-                    การบริหารจัดการขยะ
-                    ถังขยะเปียกลดโลกร้อน
-                    และธนาคารขยะ
-                  </td>
-                  <td>1. ผลการปฏิบัติงาน : ผลการดำเนินโครงการบริหารจัดการขยะ ถังขยะเปียกลดโลกร้อน และธนาคารขยะ เพื่อให้อำเภอเป็นศูนย์การเรียนรู้
+                    การให้ความช่วยเหลือ
+                    ผู้ยากไร</td>
+                  <td>1. ผลการปฏิบัติงาน : การบันทึกและปรับปรุงข้อมูลจากฐานข้อมูลของ มท.
+                    อย่างสม่ำเสมอ (ปรับปรุงข้อมูลสม่ำเสมอ)
+                    อำเภอมีการบันทึกและปรับปรุงข้อมูลจากฐานข้อมูลผู้ยากไร้ตามที่ มท. กำหนด
+                    ครอบคลุมทั่วถึงในพื้นที่อย่างสม่ำเสมอ
 
                   </td>
                   <td>
@@ -458,7 +459,267 @@ $data = $mc->select_1($sql);
                   </td>
                   <td>
                 </tr>
+                <tr>
+                  <td></td>
+                  <td>2. ผลการปฏิบัติงาน : มีการแต่งตั้งคณะกรรมการ/คณะทำงาน ที่เกี่ยวข้องกับการ
+                    ช่วยเหลือผู้ยากไร้ (แต่งตั้งคณะกรรมการ/คณะทำงานจาก 7 ภาคีเครือข่าย)
+                    อำเภอมีการแต่งตั้งคณะกรรมการ/คณะทำงาน ที่เกี่ยวข้องกับการช่วยเหลือ
+                    ผู้ยากไร้มีองค์ประกอบจาก 7 ภาคีเครือข่าย และมีการมอบหมายภารกิจ
+                    และอำนาจหน้าที่ที่ชัดเจน
 
+
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_2' . @$user["acode"] . "before.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_2' . @$user["acode"] . "after.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td><a
+                      href="5s_upload.php?pcode=<?= @$user['pcode']; ?>&acode=<?= @$user['acode']; ?>&aname=<?= @$user['aname']; ?>&pname=<?= @$user['pname']; ?>&assessment=3_2"><button
+                        type="submit"
+                        class="btn btn-primary  md:text-xl text-xl text-white  py-2 px-4 border-b-4rounded">อัพโหลด</button></a>
+                  </td>
+
+                  <!-- comment -->
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>3. ผลการปฏิบัติงาน : มีเครือข่ายความร่วมมือที่เข้มแข็งในการสนับสนุน
+                    พัฒนาในการสร้างโอกาสและความเสมอภาค (เพิ่มโอกาสการเข้าถึงบริการภาครัฐ)
+                    อำเภอมีเครือข่ายความร่วมมือที่เข้มแข็ง มีการบูรณาการผ่านกลไกภาคีเครือข่าย
+                    ที่สนับสนุนดูแลและค้นหาผู้ยากไร้ในพื้นที่อย่างต่อเนื่อง มีกระบวนการส่งต่อการ
+                    ช่วยเหลือผู้ยากไร้ให้สามารถเข้าถึงบริการพื้นฐานทางสังคมของหน่วยงานภาครัฐ
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_3' . @$user["acode"] . "before.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_3' . @$user["acode"] . "after.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td><a
+                      href="5s_upload.php?pcode=<?= @$user['pcode']; ?>&acode=<?= @$user['acode']; ?>&aname=<?= @$user['aname']; ?>&pname=<?= @$user['pname']; ?>&assessment=3_3"><button
+                        type="submit"
+                        class="btn btn-primary  md:text-xl text-xl text-white  py-2 px-4 border-b-4rounded">อัพโหลด</button></a>
+                  </td>
+
+                  <!-- comment -->
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td>4. ผลการปฏิบัติงาน :การจัดกิจกรรมส่งเสริมทักษะการใช้ชีวิตและการประกอบ
+                    อาชีพ (สร้างทักษะ/ส่งเสริมอาชีพ)
+                    อำเภอมีการบูรณาการร่วมกับภาคีเครือข่ายทั้ง 7 ภาคี จัดกิจกรรมส่งเสริมทักษะ
+                    การใช้ชีวิตและทักษะการประกอบอาชีพให้กับผู้ยากไร้ในพื้นที่อย่างต่อเนื่อง
+                    และสามารถแสดงผลสัมฤทธิ์เชิงประจักษ์ อย่างน้อย 2 บุคคล/ครัวเรือน
+
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_4' . @$user["acode"] . "before.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_4' . @$user["acode"] . "after.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td><a
+                      href="5s_upload.php?pcode=<?= @$user['pcode']; ?>&acode=<?= @$user['acode']; ?>&aname=<?= @$user['aname']; ?>&pname=<?= @$user['pname']; ?>&assessment=3_4"><button
+                        type="submit"
+                        class="btn btn-primary  md:text-xl text-xl text-white  py-2 px-4 border-b-4rounded">อัพโหลด</button></a>
+                  </td>
+
+                  <!-- comment -->
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>5. . ผลการปฏิบัติงาน : มีผลสัมฤทธิ์จากการช่วยเหลือผู้ยากไร้ให้มีคุณภาพชีวิต
+                    ที่ดีขึ้นในเชิงประจักษ์ (การช่วยเหลืออย่างยั่งยืน)
+                    อำเภอสามารถแสดงผลสัมฤทธิ์เชิงประจักษ์ จากการช่วยเหลือผู้ยากไร้ให้มีคุณภาพชีวิต
+                    ที่ดีอย่างยั่งยืน (ต้องเป็นมากกว่าการสงเคราะห์) อย่างน้อย 2 บุคคล/ครัวเรือน
+
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_5' . @$user["acode"] . "before.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    $filePath = '../../uploads/upload_sup/3_5' . @$user["acode"] . "after.jpg";
+                    if (file_exists($filePath)) {
+                      ?>
+                      <div class="grid md:grid-cols-1 grid-cols-1 justify-center mx-auto mt-8">
+                        <div class="group relative block overflow-hidden transition-all duration-500">
+                          <a href="<?= $filePath ?>" class="lightbox transition-all duration-500 group-hover:scale-105"
+                            title="">
+                            <img src="<?= $filePath ?>" class="" width="300" height="300">
+                          </a>
+
+                        </div>
+                      </div>
+                      <!-- <img id="image-preview" class="object-contain border border-gray-300" alt="Image preview" src="< ?= $filePath ?>"> -->
+                      <?php
+                    } else {
+                      ?>
+
+
+                      <?php
+                    }
+                    ?>
+                  </td>
+                  <td><a
+                      href="5s_upload.php?pcode=<?= @$user['pcode']; ?>&acode=<?= @$user['acode']; ?>&aname=<?= @$user['aname']; ?>&pname=<?= @$user['pname']; ?>&assessment=3_5"><button
+                        type="submit"
+                        class="btn btn-primary  md:text-xl text-xl text-white  py-2 px-4 border-b-4rounded">อัพโหลด</button></a>
+                  </td>
+
+                  <!-- comment -->
+                </tr>
 
 
               </tbody>

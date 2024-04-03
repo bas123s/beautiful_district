@@ -1,5 +1,5 @@
 <?php
-$title = 'หัวข้อการประเมินหลัก 1. การขับเคลื่อนภารกิจของ มท. "บำบัดทุกข์ บำรุงสุข" (100 คะแนน)"';
+$title = 'หัวข้อการประเมินหลัก 1. การขับเคลื่อนภารกิจของ กระทรวงมหาดไทย (100 คะแนน)"';
 require '../../require/head_php.php';
 require '../../require/head_html4.php'; //แก้ไข menu ในไฟล์  menuconfig.php
 //require '../../require/head_php.php';
@@ -58,7 +58,7 @@ $data = $mc->select_all($sql);
                     <form method="post" action="form_query.php">
 
                         <table id="example" class="table table-striped table-responsive">
-                            <h3 class="text-center text-3xl font-bold"> แบบบันทึกข้อมูล หัวข้อการประเมินหลัก 1. การขับเคลื่อนภารกิจของ มท.</h3>
+                            <h3 class="text-center text-3xl font-bold"> แบบบันทึกข้อมูล หัวข้อการประเมินหลัก 1. การขับเคลื่อนภารกิจของ กระทรวงมหาดไทย.</h3>
                             <?php if ($user['pid'] == "0307") { ?>
                                 <a href="#" 
                                             class="btn btn-warning  md:text-2xl text-2xl text-white font-bold py-2 px-4 border-b-4rounded">แบบฟอร์มการให้คะแนน หนี้นอกระบบ </a>
@@ -73,20 +73,19 @@ $data = $mc->select_all($sql);
                                     <th rowspan="2" class="text-center">อำเภอ</th>
 
                                     <?php if ($user['pid'] == "0310") { ?>
-                                        <th colspan="2" class="text-center">อำเภอบำบัดทุกข์ บำรุงสุข</th>
-                                        <th colspan="2" class="text-center">หนึ่งตำบล หนึ่งหมู่บ้านยั่งยืน</th>
+                                 
+                                        <th colspan="2" class="text-center">โครงการหมู่บ้านยั่งยืน</th>
                                     <?php } else if ($user['pid'] == "0307") { ?>
                                         <th colspan="2" class="text-center">หนี้นอกระบบ </th>
                                     <?php } else if ($user['pid'] == "0311") { ?>
-                                        <th colspan="2" class="text-center">หมู่บ้านสีขาว </th>
+                                        <th colspan="2" class="text-center">การป้องกันปราบปรามและแก้ไขปัญหายาเสพติด </th>
                                     <?php } else if ($user['pid'] == "0309") { ?>
                                         <th colspan="2" class="text-center">ThaiD </th>
                                     <?php } ?>
                                 </tr><!-- comment -->
                                 <tr>
                                     <?php if ($user['pid'] == "0310") { ?>
-                                        <th class="text-center">คะแนนเต็ม</th>
-                                        <th class="text-center">คะแนนที่ได้รับ</th>
+                             
                                         <th class="text-center">คะแนนเต็ม</th>
                                         <th class="text-center">คะแนนที่ได้รับ</th>
                                     <?php } else { ?>
@@ -113,11 +112,9 @@ $data = $mc->select_all($sql);
                                         <td><?= @$value['aname']; ?><input name="id[<?= @$value['id']; ?>]" hidden value="1"></td>
                                         <?php if ($user['pid'] == "0310") { ?>
                                             <td>20</td>
-                                            <td class="px-4 py-2 text-right"><input name="dcast[<?= @$value['id']; ?>]" class="<?= $css; ?>" <?= $input_option ?> type='number' value='<?= @$value['dcast']; ?>'></td>
-                                            <td>20</td>
                                             <td class="px-4 py-2 text-right"><input name="svs[<?= @$value['id']; ?>]" class="<?= $css; ?>" <?= $input_option ?>  type='number' value='<?= @$value['svs']; ?>'></td>
                                         <?php } else if ($user['pid'] == "0307") { ?>
-                                            <td>15</td>
+                                            <td>20</td>
                                             <td class="px-4 py-2 text-right"> <input name="damrong[<?= @$value['id']; ?>]" class="<?= $css; ?>" <?= $input_option2 ?>  type='number' value='<?= @$value['damrong']; ?>'></td>
                                         <?php } else if ($user['pid'] == "0311") { ?>
                                             <td>15</td>

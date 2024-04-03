@@ -40,7 +40,8 @@ try {
     $month = $mc->strMonth;
     $monthCut = $mc->strMonthCut;
 
-    function showDate($date) {
+    function showDate($date)
+    {
         if ($date != "") {
             $d = date("d", strtotime($date)) + 0;
             $m = date("n", strtotime($date));
@@ -57,134 +58,153 @@ try {
 
     <html>
 
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>ที่ทำการปกครองอำเภอ<?= @($_REQUEST['aname']); ?>&nbsp;&nbsp; จังหวัด<?= @($_REQUEST['pname']); ?></title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet"> -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ที่ทำการปกครองอำเภอ
+            <?= @($_REQUEST['aname']); ?>&nbsp;&nbsp; จังหวัด
+            <?= @($_REQUEST['pname']); ?>
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet"> -->
 
-            <style>
-                * {
-                    font-family: "THSarabunNew";
+        <style>
+            * {
+                font-family: "THSarabunNew";
 
-                }
-                body {
-                }
-                .table1{
-                    border: none;
-                }
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    font-size: 16pt;
-                    text-align:center;
-                }
-                th, td {
-                    border: 1px solid dimgray;
-                    border-collapse: collapse;
-                    font-size: 16pt;
-                    text-align:center;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                }
-                .footer {
-                    position: fixed;
-                    bottom: 0;
-                    width: 100%;
-                    font-size: 16pt;
-                    text-align: center;
+            }
 
-                    appearance: none;
-                    background-color: #fff;
-                    margin: 0;
-                    font: inherit;
-                    color: currentColor;
-                    width: 1.15em;
-                    height: 1.15em;
-                    border: 0.15em solid currentColor;
-                    border-radius: 50%;
-                }
-            </style>
+            body {}
 
-        </head>
-        <body>
+            .table1 {
+                border: none;
+            }
 
-            <div>
-                <div style="font-size: 16pt; text-align: center; "><b>ที่ทำการปกครองอำเภอ<?= @($_REQUEST['aname']); ?>&nbsp;&nbsp; จังหวัด<?= @($_REQUEST['pname']); ?></b> </div>
-                <h4 style="font-size: 16pt; text-align: center; font:bold"> หัวข้อการประเมินหลัก 3. การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย </h4>
-                <!--<b style="font-size: 16pt; text-align: left;"> หัวข้อการประเมินหลัก  3. การจัดการความเรียบร้อยของที่ทำการปกครองอำเภอ (5 ส.)  </b>-->
-                <table >
-                    <thead>
-                        <tr>
-                            <th  style="text-align: center;">ที่</th>
-                            <th  style="text-align: center;">หัวข้อการประเมินย่อย</th>
-                            <th style="text-align: center;">คะแนนเต็ม</th>
-                            <th  style="text-align: center;">คะแนนที่ได้รับ</th>
-                        </tr><!-- comment -->
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <?php
-                            $css = "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white";
-                            @$sum_all = 0;
-                            @$sum_all = @$data['food']  + @$data['clean']  + @$data['thai']  + @$data['bin']  + @$data['homeless'];
-                            ?>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 16pt;
+                text-align: center;
+            }
 
-                            <td style="width: 8%;">1</td>
-                            <td style="width: 70%;text-align: left; padding-left: 10px;" >“บ้านนี้มีรัก ปลูกผักกินเอง/ทางนี้มีผล ผู้คนรักกัน”</td>
-                            <td>100</td>
-                            <td class="px-4 py-2 text-right"> <?= @$data['food']; ?></td>
-                        </tr>
-                       
-                        <tr>
-                            <td>2 </td>
-                            <td style="text-align: left; padding-left: 10px;" >การส่งเสริมการสร้างสุขอนามัย</td>
-                            <td>100</td>
-                            <td class="px-4 py-2 text-right"> <?= @$data['clean']; ?></td>
-                        </tr>
-                       
-                        <tr>
-                            <td>3 </td>
-                            <td style="text-align: left; padding-left: 10px;" >“ผ้าไทยใส่ให้สนุก”  </td>
-                            <td>100</td>
-                            <td class="px-4 py-2 text-right"> <?= @$data['thai']; ?></td>
-                        </tr><!-- comment -->
-                        <tr>
-                            <td>4 </td>
-                            <td style="text-align: left; padding-left: 10px;" > “ครอบครัวมหาดไทย ใส่ใจสิ่งแวดล้อม”  </td>
-                            <td>100</td>
-                            <td class="px-4 py-2 text-right"> <?= @$data['bin']; ?></td>
-                        </tr><!-- comment -->
-                        <tr>
-                            <td>5 </td>
-                            <td style="text-align: left; padding-left: 10px;" >โครงการให้ความช่วยเหลือผู้ยากไร้
-การซ่อมแซมบ้านเรือนผู้ยากไร้</td>
-                            <td>100</td>
-                            <td class="px-4 py-2 text-right"> <?= @$data['homeless']; ?></td>
-                        </tr><!-- comment -->
-                        <tr>
-                            <td colspan="2" style="font-size: 16pt; text-align: center; ">รวม</td>
-                            <td >500</td>
-                            <td class="px-4 py-2 text-right"><?= @$sum_all; ?></td>
-                        </tr>
-                    </tbody>
+            th,
+            td {
+                border: 1px solid dimgray;
+                border-collapse: collapse;
+                font-size: 16pt;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
 
-                </table>
-            </div>
-            <br><br><br><br><br>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                font-size: 16pt;
+                text-align: center;
 
-            <div style=" text-align: center; width: 100%;font-size: 16pt;"><b>(..................................................)<br><br>
-                    ผู้ว่าราชการจังหวัด<?= @($_REQUEST['pname']); ?><br><br>
-                    ผู้ประเมิน</b></div>
-            <div class="bottom-content" style="position: absolute;bottom: 0; text-right: ">
-                พิมพ์รายงานเมื่อ <?= $mc->DateThai(date("Y-m-d")); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                โดย::<?= @$user['aname']; ?> จังหวัด<?= @$user['pname']; ?>
-            </div>
+                appearance: none;
+                background-color: #fff;
+                margin: 0;
+                font: inherit;
+                color: currentColor;
+                width: 1.15em;
+                height: 1.15em;
+                border: 0.15em solid currentColor;
+                border-radius: 50%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div>
+            <div style="font-size: 16pt; text-align: center; "><b>ที่ทำการปกครองอำเภอ
+                    <?= @($_REQUEST['aname']); ?>&nbsp;&nbsp; จังหวัด
+                    <?= @($_REQUEST['pname']); ?>
+                </b> </div>
+            <h4 style="font-size: 16pt; text-align: center; font:bold"> หัวข้อการประเมินหลัก 3.
+                การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย </h4>
+            <!--<b style="font-size: 16pt; text-align: left;"> หัวข้อการประเมินหลัก  3. การจัดการความเรียบร้อยของที่ทำการปกครองอำเภอ (5 ส.)  </b>-->
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">ที่</th>
+                        <th style="text-align: center;">หัวข้อการประเมินย่อย</th>
+                        <th style="text-align: center;">คะแนนเต็ม</th>
+                        <th style="text-align: center;">คะแนนที่ได้รับ</th>
+                    </tr><!-- comment -->
+                </thead>
+                <tbody>
+                    <tr>
+                        <?php
+                        $css = "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white";
+                        @$sum_all = 0;
+                        @$sum_all = @$data['food'] + @$data['clean'] + @$data['thai'] ;
+                        ?>
+
+                        <td style="width: 8%;">1</td>
+                        <td style="width: 70%;text-align: left; padding-left: 10px;">อำเภอตรวจเยี่ยม/
+                            ให้กำลังใจ/เข้าร่วมกิจกรรม
+                            ที่สอดคล้องกับนโยบายสมาคมแม่บ้านมหาดไทย</td>
+                        <td>30</td>
+                        <td class="px-4 py-2 text-right">
+                            <?= @$data['food']; ?>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2 </td>
+                        <td style="text-align: left; padding-left: 10px;">อำเภอขับเคลื่อนการขยายผลโครงการ</td>
+                        <td>30</td>
+                        <td class="px-4 py-2 text-right">
+                            <?= @$data['clean']; ?>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3 </td>
+                        <td style="text-align: left; padding-left: 10px;">
+                            อำเภอขับเคลื่อนนโยบายของสมาคมแม่บ้านมหาดไทยให้เกิดผลเป็นรูปธรรม </td>
+                        <td>40</td>
+                        <td class="px-4 py-2 text-right">
+                            <?= @$data['thai']; ?>
+                        </td>
+                    </tr><!-- comment -->
+
+                    <tr>
+                        <td colspan="2" style="font-size: 16pt; text-align: center; ">รวม</td>
+                        <td>100</td>
+                        <td class="px-4 py-2 text-right">
+                            <?= @$sum_all; ?>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <br><br><br><br><br>
+
+        <div style=" text-align: center; width: 100%;font-size: 16pt;">
+            <b>(..................................................)<br><br>
+                ผู้ว่าราชการจังหวัด
+                <?= @($_REQUEST['pname']); ?><br><br>
+                ผู้ประเมิน
+            </b></div>
+        <div class="bottom-content" style="position: absolute;bottom: 0; text-right: ">
+            พิมพ์รายงานเมื่อ
+            <?= $mc->DateThai(date("Y-m-d")); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            โดย::
+            <?= @$user['aname']; ?> จังหวัด
+            <?= @$user['pname']; ?>
+        </div>
 
 
-        </body>
+    </body>
+
     </html>
 
     <?php
@@ -205,9 +225,9 @@ try {
     html2pdf(document.getElementsByClassName('container-fluid'), {
         margin: 10,
         filename: "my.pdf",
-        image: {type: 'jpeg', quality: 1},
-        html2canvas: {dpi: 72, letterRendering: true},
-        jsPDF: {unit: 'mm', format: 'a4', orientation: 'landscape'},
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { dpi: 72, letterRendering: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
         pdfCallback: pdfCallback
     })
 

@@ -42,30 +42,35 @@ $data = $mc->select_all($sql);
             </h4><br>
             <table id="example" class="table-bordered table-responsive" style="text-align: center; border: #000000; ">
               <thead>
-              <tr>
+                <tr>
                   <th rowspan="2">ที่</th>
                   <!--<th rowspan="2">รหัสจังหวัด</th>-->
                   <th rowspan="2">จังหวัด</th>
                   <!--<th rowspan="2">รหัสอำเภอ</th>-->
                   <th rowspan="2">อำเภอ</th>
-                  <th colspan="2">อำเภอตรวจเยี่ยม/
-ให้กำลังใจ/เข้าร่วมกิจกรรม
-ที่สอดคล้องกับนโยบายสมาคมแม่บ้านมหาดไทย </th>
+                  <th colspan="2">บ้านนี้มีรักฯ</th>
 
-                  <th colspan="2">อำเภอขับเคลื่อนการขยายผลโครงการ ณ ที่ทำการปกครองอำเภอ/พื้นที่ดำเนินการที่ของอำเภอ</th>
+                  <th colspan="2">ส่งเสริมการสร้างสุขอนามัยฯ</th>
 
-                  <th colspan="2">อำเภอขับเคลื่อนนโยบายของสมาคมแม่บ้านมหาดไทยให้เกิดผลเป็นรูปธรรม</th>
+                  <th colspan="2">ผ้าไทยใส่ให้สนุกฯ</th>
+                  <th colspan="2">ครอบครัวมหาดไทย ใส่ใจสิ่งแวดล้อม</th>
+                  <th colspan="2">รถเข็นนั่ง ปันสุข</th>
                   <th rowspan="2">พิมพ์แบบประเมิน</th>
                 </tr>
 
                 <tr>
                   <th>คะแนนเต็ม</th>
                   <th>คะแนนที่ได้รับ</th>
+
+
                   <th>คะแนนเต็ม</th>
                   <th>คะแนนที่ได้รับ</th>
                   <th>คะแนนเต็ม</th>
                   <th>คะแนนที่ได้รับ</th>
-              
+                  <th>คะแนนเต็ม</th>
+                  <th>คะแนนที่ได้รับ</th>
+                  <th>คะแนนเต็ม</th>
+                  <th>คะแนนที่ได้รับ</th>
                 </tr>
               </thead>
 
@@ -91,24 +96,30 @@ $data = $mc->select_all($sql);
                     <td>
                       <?= @$value['aname']; ?><input name="id[<?= @$value['id']; ?>]" hidden value="1">
                     </td>
-                    <td>30</td>
+                    <td>100</td>
                     <td class="px-4 py-2 text-right">
                       <?= @$value['food']; ?>
                     </td>
-                    <td>30</td>
+                    <td>100</td>
 
 
                     <td class="px-4 py-2 text-right">
                       <?= @$value['clean']; ?>
                     </td>
-                    <td>40</td>
+                    <td>100</td>
 
 
                     <td class="px-4 py-2 text-right">
                       <?= @$value['thai']; ?>
                     </td>
-                   
-
+                    <td>100</td>
+                    <td class="px-4 py-2 text-right">
+                      <?= @$value['bin']; ?>
+                    </td>
+                    <td>100</td>
+                    <td class="px-4 py-2 text-right">
+                      <?= @$value['homeless']; ?>
+                    </td>
                   
                     <td><a
                         href="m_pdf.php?acode=<?= @$value['acode']; ?>&aname=<?= @$value['aname']; ?>&pname=<?= @$value['pname']; ?>">

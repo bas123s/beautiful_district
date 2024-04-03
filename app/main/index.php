@@ -16,8 +16,32 @@ require '../../require/head2.php';
             </div>
             <div class="content mt-7">
                 <a href="../main/form_dopa.php" class="title h5 text-lg font-medium hover:text-indigo-600">1.
-                    การขับเคลื่อนภารกิจของ มท.</a>
-                <p class="text-slate-400 mt-3">"บำบัดทุกข์ บำรุงสุข"</p>
+                    การขับเคลื่อนภารกิจของ กระทรวงมหาดไทย.</a>
+                <?php if (@$user['pid'] == '0307') { ?>
+                    <p class="text-slate-400 mt-3">"1.3 การแก้ไขปัญหาหนี้นอกระบบ"</p>
+                    <?php
+                }
+
+                ?>
+                <?php if (@$user['pid'] == '0309') { ?>
+                    <p class="text-slate-400 mt-3">"1.1 ThaiD"</p>
+                    <?php
+                }
+
+                ?>
+                   <?php if (@$user['pid'] == '0310') { ?>
+                    <p class="text-slate-400 mt-3">"1.2 โครงการหมู่บ้านยั่งยืน"</p>
+                    <?php
+                }
+
+                ?>
+                   <?php if (@$user['pid'] == '0311') { ?>
+                    <p class="text-slate-400 mt-3">"1.4 ยาเสพติด"</p>
+                    <?php
+                }
+
+                ?>
+
                 <div class="mt-5">
                     <a href="../main/form_dopa.php"
                         class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">ทำแบบประเมิน
@@ -38,13 +62,12 @@ require '../../require/head2.php';
         class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
         <div
             class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-            <a href="../main/form_main_m.php"> <img
-                    class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+            <a href="../main/form_main_m.php"> <img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
                     src="../../require/partials/assets/images/m-icon.jpg" alt="" width="384" height="512"> </a>
         </div>
         <div class="content mt-7">
             <a href="../main/form_main_m.php" class="title h5 text-lg font-medium hover:text-indigo-600">3.
-            การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย</a>
+                การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย</a>
             <p class="text-slate-400 mt-3">"สมาคมแม่บ้านมหาดไทย"</p>
             <div class="mt-5">
                 <a href="../main/form_main_m.php"
@@ -124,7 +147,7 @@ require '../../require/head2.php';
         <div class="content mt-7">
             <a href="../main/form_main_5s.php" class="title h5 text-lg font-medium hover:text-indigo-600">2.
                 การจัดการความเรียบร้อย</a>
-            <p class="text-slate-400 mt-3">"การจัดการความเรียบร้อยของที่ทำการปกครอง (5 ส.)"</p>
+            <p class="text-slate-400 mt-3"></p>
             <div class="mt-5">
                 <a href="../main/form_main_5s.php"
                     class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">ทำแบบประเมิน
@@ -152,7 +175,8 @@ require '../../require/head2.php';
                     src="logo_500x500.png" alt="" width="384" height="512"> </a>
         </div>
         <div class="content mt-7">
-            <a href="../main/inspector.php" class="title h5 text-lg font-medium hover:text-indigo-600">ลงพื้นที่ตรวจสอบและอัปโหลดรูปภาพ</a>
+            <a href="../main/inspector.php"
+                class="title h5 text-lg font-medium hover:text-indigo-600">ลงพื้นที่ตรวจสอบและอัปโหลดรูปภาพ</a>
             <p class="text-slate-400 mt-3">"กองตรวจราชการและเรื่องราวร้องทุกข์"</p>
 
             <div class="mt-5">
@@ -168,45 +192,67 @@ require '../../require/head2.php';
         class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
         <div
             class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-            <a href="../main/rpt_5s_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>"><img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+            <a href="../main/upload_5s.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"><img
+                    class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
                     src="../../require/partials/assets/images/5s-icon-01.png" alt="" width="384" height="512"> </a>
         </div>
         <div class="content mt-7">
-            <a href="../main/rpt_5s_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>" class="title h5 text-lg font-medium hover:text-indigo-600">2.
+            <a href="../main/upload_5s.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
+                class="title h5 text-lg font-medium hover:text-indigo-600">2.
                 การจัดการความเรียบร้อย</a>
-            <p class="text-slate-400 mt-3">"การจัดการความเรียบร้อยของที่ทำการปกครอง (5 ส.)"</p>
+            <p class="text-slate-400 mt-3"></p>
 
             <div class="mt-5">
-                <a href="../main/rpt_5s_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>"
+                <a href="../main/upload_5s.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
                     class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อัปโหลดไฟล์
                     <i class="uil uil-arrow-right"></i></a>
             </div>
         </div>
     </div>
-<?php } ?>
 
-<?php if (in_array($uap->app_1, ["1"], TRUE)) { ?>
-
-<div
-    class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
     <div
-        class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-        <a href="../main/rpt_support_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>"> <img
-                class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                src="../../require/partials/assets/images/m-icon.jpg" alt="" width="384" height="512"> </a>
-    </div>
-    <div class="content mt-7">
-        <a href="../main/rpt_support_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>" class="title h5 text-lg font-medium hover:text-indigo-600">4.
-            อำเภอมีสภาพในการเป็นศูนย์การเรียนรู้</a>
-        <p class="text-slate-400 mt-3">"สมาคมแม่บ้านมหาดไทย"</p>
+        class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
+        <div
+            class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+            <a href="../main/upload_m.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"> <img
+                    class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+                    src="../../require/partials/assets/images/m-icon.jpg" alt="" width="384" height="512"> </a>
+        </div>
+        <div class="content mt-7">
+            <a href="../main/upload_m.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
+                class="title h5 text-lg font-medium hover:text-indigo-600">3.
+                การสนับสนุนนโยบายสมาคมแม่บ้านมหาดไทย</a>
+            <p class="text-slate-400 mt-3">"สมาคมแม่บ้านมหาดไทย"</p>
 
-        <div class="mt-5">
-            <a href="../main/rpt_support_amp_upload.php?pcode=<?php echo @$user['pcode']; ?>&aname=<?php echo @$user['aname']; ?>"
-                class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อัปโหลดไฟล์
-                <i class="uil uil-arrow-right"></i></a>
+            <div class="mt-5">
+                <a href="../main/upload_m.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
+                    class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อัปโหลดไฟล์
+                    <i class="uil uil-arrow-right"></i></a>
+            </div>
         </div>
     </div>
-</div>
+    <div
+        class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
+        <div
+            class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+            <a href="../main/upload_sup.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"> <img
+                    class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
+                    src="../../require/partials/assets/images/m-icon.jpg" alt="" width="384" height="512"> </a>
+        </div>
+        <div class="content mt-7">
+            <a href="../main/upload_sup.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
+                class="title h5 text-lg font-medium hover:text-indigo-600">4.
+                อำเภอมีสภาพในการเป็นศูนย์การเรียนรู้</a>
+            <p class="text-slate-400 mt-3">"สมาคมแม่บ้านมหาดไทย"</p>
+
+            <div class="mt-5">
+                <a href="../main/upload_sup.php?pcode=<?php echo @$user['pcode']; ?>&acode=<?php echo @$user['acode']; ?>"
+                    class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:transition-all after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">อัปโหลดไฟล์
+                    <i class="uil uil-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
 <?php } ?>
 
 <?php if (in_array($uap->app_1, ["7", "9"], TRUE)) { ?>
@@ -215,12 +261,13 @@ require '../../require/head2.php';
             class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
             <div
                 class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-                <a href="../main/inspector_check.php"> <img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                        src="logo_500x500.png" alt="" width="384" height="512"> </a>
+                <a href="../main/inspector_check.php"> <img
+                        class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto" src="logo_500x500.png" alt=""
+                        width="384" height="512"> </a>
             </div>
             <div class="content mt-7">
                 <a href="../main/inspector_check.php" class="title h5 text-lg font-medium hover:text-indigo-600">
-                ตรวจสอบรูปภาพกองตรวจราชการ</a>
+                    ตรวจสอบรูปภาพกองตรวจราชการ</a>
                 <p class="text-slate-400 mt-3">" กองตรวจราชการและเรื่องราวร้องทุกข์"</p>
                 <div class="mt-5">
                     <a href="../main/inspector_check.php"
@@ -333,19 +380,20 @@ require '../../require/head2.php';
     </div> -->
 
 <?php } ?>
-<?php if (in_array($uap->app_1, ["7","8" ,"9"], TRUE)) { ?>
+<?php if (in_array($uap->app_1, ["7", "8", "9"], TRUE)) { ?>
     <?php if (@$user['pid'] == '0300') { ?>
 
         <div
             class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
             <div
                 class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-                <a href="../main/inspector_rpt.php"> <img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                        src="logo_500x500.png" alt="" width="384" height="512"> </a>
+                <a href="../main/inspector_rpt.php"> <img
+                        class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto" src="logo_500x500.png" alt=""
+                        width="384" height="512"> </a>
             </div>
             <div class="content mt-7">
                 <a href="../main/inspector_rpt.php" class="title h5 text-lg font-medium hover:text-indigo-600">
-                รายงานกองตรวจราชการ</a>
+                    รายงานกองตรวจราชการ</a>
                 <p class="text-slate-400 mt-3">" กองตรวจราชการและเรื่องราวร้องทุกข์"</p>
                 <div class="mt-5">
                     <a href="../main/inspector_rpt.php"
@@ -358,12 +406,13 @@ require '../../require/head2.php';
             class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
             <div
                 class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
-                <a href="../main/inspector_check.php"> <img class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto"
-                        src="logo_500x500.png" alt="" width="384" height="512"> </a>
+                <a href="../main/inspector_check.php"> <img
+                        class="w-48 h-48 lg:w-48 lg:h-auto lg:rounded-none rounded-full mx-auto" src="logo_500x500.png" alt=""
+                        width="384" height="512"> </a>
             </div>
             <div class="content mt-7">
                 <a href="../main/inspector_check.php" class="title h5 text-lg font-medium hover:text-indigo-600">
-                ตรวจสอบรูปภาพกองตรวจราชการ</a>
+                    ตรวจสอบรูปภาพกองตรวจราชการ</a>
                 <p class="text-slate-400 mt-3">" กองตรวจราชการและเรื่องราวร้องทุกข์"</p>
                 <div class="mt-5">
                     <a href="../main/inspector_check.php"
@@ -376,7 +425,7 @@ require '../../require/head2.php';
     }
     if (@$user['pid'] == '030001') { ?>
 
-<div
+        <div
             class="p-6 hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center">
             <div
                 class="w-48 h-48 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
@@ -385,7 +434,7 @@ require '../../require/head2.php';
             </div>
             <div class="content mt-7">
                 <a href="../main/news_detail.php" class="title h5 text-lg font-medium hover:text-indigo-600">
-                อัพโหลด ข่าวสารและประชาสัมพันธ์</a>
+                    อัพโหลด ข่าวสารและประชาสัมพันธ์</a>
                 <p class="text-slate-400 mt-3">" ข่าวสาร ประชาสัมพันธ์"</p>
                 <div class="mt-5">
                     <a href="../main/news_detail.php"
@@ -394,7 +443,7 @@ require '../../require/head2.php';
                 </div>
             </div>
         </div>
-        <?php   
+    <?php
     }
 }
 ?>
